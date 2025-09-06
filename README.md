@@ -12,6 +12,8 @@ My main focus was on creating a **functional, end-to-end solution** that is both
 ### OUTPUT SCREENSHOTS
 <img width="1915" height="1023" alt="Frontend-Main-View png" src="https://github.com/user-attachments/assets/bf3018c7-8778-4444-9b53-1bc610139549" />
 <img width="3145" height="769" alt="Flow Diagram" src="https://github.com/user-attachments/assets/8a047747-bfb9-4f33-a579-7375da51504a" />
+<img width="1918" height="1079" alt="My_SQL_Workbench" src="https://github.com/user-attachments/assets/e85b459a-73ce-47da-8c9b-7e40275b9e5c" />
+
 <img width="1911" height="1077" alt="Postman-Attendance-Report png" src="https://github.com/user-attachments/assets/4233ee10-d6ff-4805-a682-95c50f606b17" />
 <img width="1904" height="1079" alt="Postman-Feedback-Report png" src="https://github.com/user-attachments/assets/06e541ab-b4f3-4a0a-8d51-d2ff61442b0a" />
 <img width="1912" height="1079" alt="Postman-Top-Students png" src="https://github.com/user-attachments/assets/e1526a60-9e61-49a9-b523-9bb79e82e122" />
