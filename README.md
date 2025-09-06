@@ -1,81 +1,129 @@
-Campus Event Management Platform
-================================
+# 🎓 Campus Event Management Platform
 
-Project Overview
-----------------
+## 📌 Project Overview
+Hey there! 👋 This project is my take on a **Campus Event Management Platform**, designed as a full-stack solution.  
+The goal was to build a system that could handle the **entire lifecycle of an event**, from a student registering to a college admin analyzing reports.
 
-This project is a full-stack prototype for a Campus Event Management Platform, designed to help college staff manage events and students interact with them. It consists of a back-end API for data processing and a simple, clean front-end for user interaction and reporting. The goal was to demonstrate an end-to-end understanding of web development, from database design and API creation to building a functional user interface.
+- The **back-end** is a RESTful API that handles all the heavy lifting, like managing data and performing calculations.  
+- The **front-end** is a clean, responsive web interface that makes it easy for a student to register and for an admin to view key event metrics.  
 
-My Understanding of the Problem
--------------------------------
+My main focus was on creating a **functional, end-to-end solution** that is both reliable and easy to use.
 
-The core challenge was to build a system that could effectively track the entire lifecycle of a campus event. This involved not only creating events but also managing student registrations, recording attendance, and collecting feedback. Most importantly, the system needed to be able to generate meaningful reports from this data to provide insights into event popularity and student engagement.
+---
 
-My approach focused on a clear separation of concerns. The back-end handles all the heavy lifting—database interactions, data integrity, and business logic—while the front-end provides a simple, intuitive way for users to interact with that data. I chose a relational database to ensure data relationships were well-defined and reliable.
+## 🧩 My Personal Understanding
+For me, the assignment was all about **connecting the dots in a full-stack application**.  
+It wasn’t just about writing code for a front-end or a back-end in isolation, but about making them **work together seamlessly**.
 
-Technology Stack
-----------------
+The biggest challenge was ensuring that the **data flowed correctly**:
+- From the **UI**,  
+- Through the **API**,  
+- Into the **database**,  
+- And back again for **reporting**.
 
-This project was built using a standard and scalable technology stack:
+I chose to use a **relational database** because the data for events, students, and registrations has a clear, well-defined relationship.  
+This approach made it much easier to **ensure data integrity** and **build complex reports**.
 
-*   **Backend:** Node.js with the Express framework for building a RESTful API.
-    
-*   **Database:** MySQL to store all event, student, and registration data.
-    
-*   **Frontend:** React for building the user interface.
-    
-*   **Styling:** Custom CSS for a clean and modern design.
-    
-*   **API Calls:** axios was used for making asynchronous HTTP requests from the frontend to the backend.
-    
+Using a simple **React front-end** allowed me to create a **user-friendly interface** that clearly showcases all the different functionalities of the system.
 
-Design Decisions and Assumptions
---------------------------------
+---
 
-*   **Data Structure:** A relational database was chosen because the relationships between Students, Events, Registrations, and Attendance are clearly defined.
-    
-*   **API:** A RESTful API design was used to ensure the application is modular and scalable. Each resource has its own set of endpoints for clear and predictable communication.
-    
-*   **Uniqueness:** I assumed that EventIDs would be globally unique across all colleges to simplify the reporting process.
-    
-*   **Duplicate Registrations:** The database schema for the registrations table includes a composite unique key on (student\_id, event\_id) to automatically prevent a student from registering for the same event more than once.
-    
+## ⚙️ Technology Stack
+This project was built using a **classic and powerful technology stack**:
 
-Installation and Setup
-----------------------
+- **Backend**: Node.js with Express  
+- **Database**: MySQL  
+- **Frontend**: React.js  
+- **API Client**: Axios for making HTTP requests  
+- **Styling**: Custom CSS  
 
-To get this project running on your local machine, please follow these steps:
+---
 
-1.  git clone \[your-github-repo-link\]cd campus-events-api
-    
-2.  Open your MySQL client and run the SQL commands provided in the sql-schema.txt file (or similar) to create the database and all the necessary tables.
-    
-3.  Navigate to the campus-events-api directory and install the required packages.npm install
-    
-4.  Navigate to the campus-events-ui directory and install its packages.cd campus-events-uinpm install
-    
-5.  Open two separate terminals. In the first terminal, start the back-end server:cd campus-events-apinpm startIn the second terminal, start the front-end:cd campus-events-uinpm start
-    
+## 🚀 Installation and How to Run
+To get this project up and running on your local machine, just follow these simple steps.
 
-The back-end API will run on http://localhost:3000, and the front-end will run on a different port (e.g., http://localhost:3001).
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Harshithappu-2003/Campus-Event-Management-Platform.git
+cd Campus-Event-Management-Platform
 
-Report Outputs
---------------
+2️⃣ Set Up the Database
+You'll need a MySQL server running locally.
+Create a new database named campus_events and then run the following SQL commands:
+CREATE DATABASE campus_events;
+USE campus_events;
 
-Here are the key reports generated by the application, with screenshots as proof of their functionality.
+-- Insert your table creation and dummy data SQL here.
+3️⃣ Install Dependencies
 
-### Frontend UI Report: Event Popularity
+The project has two separate parts (backend and frontend), each with its own dependencies.
 
-This report, visible on the main application UI, shows events sorted by the total number of student registrations.
+For the Backend:
 
-### Postman Report: Attendance Percentage
+npm install
 
-This report shows the attendance for a specific event, calculated as a percentage of total registrations.
 
-### Postman Report: Top Students
+For the Frontend:
 
-This report, a bonus feature, identifies the students who have attended the most events.
+cd campus-events-ui
+npm install
 
-### Postman Report: Average Feedback
+4️⃣ Run the Application
 
-This report provides the average feedback score for a given event, using a 1-5 rating scale.
+You'll need two separate terminal windows.
+
+In the first one, start the backend:
+
+cd campus-events-api
+npm start
+
+
+In the second one, start the frontend:
+
+cd campus-events-ui
+npm start
+
+
+The backend will run on http://localhost:3000,
+and the frontend will open automatically in your browser.
+
+
+
+📌 Event Popularity Report
+
+This report, visible on the main UI, ranks events based on the number of student registrations.
+
+📌 Attendance Percentage Report
+
+This report, accessed via a GET request to:
+
+/api/reports/attendance/:event_id
+
+
+Shows the attendance rate for a specific event.
+
+📌 Top Students Report
+
+A bonus feature!
+This report ranks the top three students who have attended the most events.
+
+📌 Average Feedback Score
+
+This report gives the average feedback rating for a particular event.
+
+### 📊 Reports and Outputs
+
+Here are the report outputs that showcase the system's functionality.
+(Screenshots for all reports are included in the submission.)
+<img width="1915" height="1023" alt="Frontend-Main-View png" src="https://github.com/user-attachments/assets/5f1917a6-19ce-43fe-9a51-09bc16d2ab8a" />
+<img width="3145" height="769" alt="Flow Diagram" src="https://github.com/user-attachments/assets/4ad15e6b-3a16-419e-81cb-b05479ffe32f" />
+<img width="1911" height="1077" alt="Postman-Attendance-Report png" src="https://github.com/user-attachments/assets/c45a2453-0957-499f-ac45-553aa12023a4" />
+<img width="1904" height="1079" alt="Postman-Feedback-Report png" src="https://github.com/user-attachments/assets/a8b5731a-85d3-4759-b2b4-1baf5b69e7ed" />
+<img width="1912" height="1079" alt="Postman-Top-Students png" src="https://github.com/user-attachments/assets/9c647a54-dcc8-493e-983c-bf39b1745f0a" />
+<img width="697" height="1078" alt="Total_api_calls" src="https://github.com/user-attachments/assets/2c3d63d1-ba40-400d-af11-0a7940706340" />
+
+
+
+
+
+
