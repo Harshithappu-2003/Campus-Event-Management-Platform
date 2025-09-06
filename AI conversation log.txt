@@ -1,0 +1,4 @@
+AI as a Problem-Solving Partner
+During development, I faced a persistent and frustrating error: 'react-scripts' is not recognized as an internal or external command. This error repeatedly broke my front-end development environment. Instead of a quick fix, this issue required a deeper understanding of the project's dependencies and local environment.
+
+I used the AI as a partner to diagnose the root cause. The assistant's step-by-step guidance, which involved a full cleanup of the npm cache and re-installation of dependencies from scratch, was crucial. This process not only resolved the technical issue but also taught me the importance of a stable local environment. Ultimately, it led me to adopt a more robust workflow, ensuring the project's reliability and stability. This collaboration demonstrates how an AI can be an essential tool for debugging and improving a developer's workflow.
